@@ -1,0 +1,43 @@
+{
+  "name": "astrophysics-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build && next export",
+    "dev": "next dev",
+    "lint": "next lint",
+    "start": "next start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out"
+  },
+  "dependencies": {
+    "@emotion/is-prop-valid": "latest",
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@radix-ui/react-tabs": "^1.1.12",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "latest",
+    "lucide-react": "^0.454.0",
+    "next": "14.2.16",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "resend": "^3.5.0",
+    "sass": "^1.89.2",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.16.5",
+    "@types/react": "^18.3.23",
+    "@types/react-dom": "^18.3.7",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "14.0.0",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.3"
+  },
+  "homepage": "https://your-username.github.io/portfolio"
+}
