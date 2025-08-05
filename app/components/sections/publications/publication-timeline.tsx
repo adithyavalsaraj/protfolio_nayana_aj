@@ -103,7 +103,7 @@ function PublicationItem({
           <CardContent className={`${isMobile ? "p-3" : "p-4"}`}>
             <div className="space-y-3">
               {/* Date Badge and Type */}
-              <div className="flex justify-between items-start gap-2">
+              <div className="flex flex-wrap justify-between items-start gap-2">
                 <Badge
                   className="text-xs font-semibold px-2 py-1 flex-shrink-0"
                   style={{
