@@ -80,7 +80,7 @@ function PublicationItem({
 
       {/* Publication Card */}
       <motion.div
-        className="absolute z-10"
+        className={`absolute z-10"`}
         style={{
           top: "0px",
           left: isMobile
@@ -259,6 +259,8 @@ export function PublicationTimeline({
         "A. J. Nayana",
         "A J Nayana",
         "AJ Nayana",
+        "Nayana A.J",
+        "A.J. Nayana",
       ];
 
       let highlightedAuthors = authors;
@@ -269,18 +271,16 @@ export function PublicationTimeline({
           "\\$&"
         );
         const regex = new RegExp(
-          `(^|[^a-zA-Z])${escapedVariation}([^a-zA-Z]|$)`,
+          `(^|[^\\w>])(${escapedVariation})([^\\w<]|$)`,
           "gi"
         );
 
         highlightedAuthors = highlightedAuthors.replace(
           regex,
-          (match, before, after) => {
-            const nameMatch = match.substring(
-              before.length,
-              match.length - after.length
-            );
-            return `${before}<span class="author-highlight">${nameMatch}</span>${after}`;
+          (match, before, name, after) => {
+            const isAlreadyHighlighted = match.includes("author-highlight");
+            if (isAlreadyHighlighted) return match;
+            return `${before}<span class="author-highlight">${name}</span>${after}`;
           }
         );
       });
@@ -311,25 +311,12 @@ export function PublicationTimeline({
       ref={timelineRef}
     >
       {/* Optimized CSS for better performance */}
-      <style jsx>{`
+      <style global jsx>{`
         .author-highlight {
           color: var(--theme-highlight-color) !important;
           font-weight: 700 !important;
-          background: ${theme === "dark"
-            ? "linear-gradient(135deg, rgba(147, 51, 234, 0.2), rgba(168, 85, 247, 0.2))"
-            : "linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(99, 102, 241, 0.2))"} !important;
-          padding: 2px 6px !important;
-          border-radius: 4px !important;
-          border: 1px solid
-            ${theme === "dark"
-              ? "rgba(147, 51, 234, 0.4)"
-              : "rgba(59, 130, 246, 0.4)"} !important;
-          box-shadow: 0 1px 3px
-            ${theme === "dark"
-              ? "rgba(147, 51, 234, 0.2)"
-              : "rgba(59, 130, 246, 0.2)"} !important;
+          text-decoration: underline !important;
           text-shadow: none !important;
-          white-space: nowrap !important;
         }
 
         .authors-text {
@@ -337,18 +324,6 @@ export function PublicationTimeline({
           word-break: break-word !important;
           overflow-wrap: break-word !important;
           margin: 0.5rem 0 !important;
-        }
-
-        .journal-badge {
-          border: 2px solid var(--theme-highlight-color) !important;
-          background: ${theme === "dark"
-            ? "linear-gradient(135deg, rgba(147, 51, 234, 0.1), rgba(168, 85, 247, 0.1))"
-            : "linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(99, 102, 241, 0.1))"} !important;
-          backdrop-filter: blur(8px) !important;
-          box-shadow: 0 2px 8px
-            ${theme === "dark"
-              ? "rgba(147, 51, 234, 0.2)"
-              : "rgba(59, 130, 246, 0.2)"} !important;
         }
       `}</style>
 
