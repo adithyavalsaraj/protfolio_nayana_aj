@@ -1,25 +1,25 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Download, FileText } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { usePortfolio } from "../../../contexts/portfolio-context"
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
+import { Download, FileText } from "lucide-react";
+import { usePortfolio } from "../../../contexts/portfolio-context";
 
 export function CVSection() {
-  const { data } = usePortfolio()
+  const { data } = usePortfolio();
 
   const handleDownloadCV = () => {
     // Create a link element and trigger download
-    const link = document.createElement("a")
-    link.href = "/assets/documents/Nayana_AJ_CV.pdf"
-    link.download = "Nayana_AJ_CV.pdf"
-    link.target = "_blank"
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-  }
+    const link = document.createElement("a");
+    link.href = "/documents/Nayana_AJ_CV.pdf";
+    link.download = "Nayana_AJ_CV.pdf";
+    link.target = "_blank";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <section id="cv" className="relative py-16 sm:py-20 z-10 px-4 sm:px-6">
@@ -31,7 +31,9 @@ export function CVSection() {
           viewport={{ once: true }}
           className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 theme-gradient-text">Experience</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 theme-gradient-text">
+            Experience
+          </h2>
 
           {/* CV Description */}
           <motion.div
@@ -42,14 +44,24 @@ export function CVSection() {
             className="max-w-2xl mx-auto mb-8"
           >
             <div className="flex items-center justify-center mb-4">
-              <FileText className="w-6 h-6 mr-2" style={{ color: "var(--theme-highlight-color)" }} />
-              <h3 className="text-lg font-semibold" style={{ color: "var(--theme-text-primary)" }}>
+              <FileText
+                className="w-6 h-6 mr-2"
+                style={{ color: "var(--theme-highlight-color)" }}
+              />
+              <h3
+                className="text-lg font-semibold"
+                style={{ color: "var(--theme-text-primary)" }}
+              >
                 Academic Curriculum Vitae
               </h3>
             </div>
-            <p className="text-sm leading-relaxed" style={{ color: "var(--theme-text-secondary)" }}>
-              Complete academic CV including detailed research experience, publications, conference presentations,
-              awards, and professional activities in astrophysics and stellar evolution research.
+            <p
+              className="text-sm leading-relaxed"
+              style={{ color: "var(--theme-text-secondary)" }}
+            >
+              Complete academic CV including detailed research experience,
+              publications, conference presentations, awards, and professional
+              activities in astrophysics and stellar evolution research.
             </p>
           </motion.div>
 
@@ -80,21 +92,36 @@ export function CVSection() {
           >
             <div className="text-center">
               <div className="text-2xl font-bold theme-gradient-text">
-                {data.experience.length > 0 ? `${data.experience.length}+` : "0"}
+                {data.experience.length > 0
+                  ? `${data.experience.length}+`
+                  : "0"}
               </div>
-              <div className="text-xs" style={{ color: "var(--theme-text-secondary)" }}>
+              <div
+                className="text-xs"
+                style={{ color: "var(--theme-text-secondary)" }}
+              >
                 Years Experience
               </div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold theme-gradient-text">{data.publications.length}</div>
-              <div className="text-xs" style={{ color: "var(--theme-text-secondary)" }}>
+              <div className="text-2xl font-bold theme-gradient-text">
+                {data.publications.length}
+              </div>
+              <div
+                className="text-xs"
+                style={{ color: "var(--theme-text-secondary)" }}
+              >
                 Publications
               </div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold theme-gradient-text">{data.statistics.totalCitations}+</div>
-              <div className="text-xs" style={{ color: "var(--theme-text-secondary)" }}>
+              <div className="text-2xl font-bold theme-gradient-text">
+                {data.statistics.totalCitations}+
+              </div>
+              <div
+                className="text-xs"
+                style={{ color: "var(--theme-text-secondary)" }}
+              >
                 Citations
               </div>
             </div>
@@ -136,5 +163,5 @@ export function CVSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

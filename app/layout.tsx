@@ -1,14 +1,14 @@
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import type React from "react"
-import { ClientLayoutWrapper } from "./components/client-layout-wrapper"
-import "./globals.css"
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import type React from "react";
+import { ClientLayoutWrapper } from "./components/client-layout-wrapper";
+import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   preload: true,
-})
+});
 
 export const metadata: Metadata = {
   title: {
@@ -34,7 +34,9 @@ export const metadata: Metadata = {
     "publications",
     "astronomy",
   ],
-  authors: [{ name: "Dr. Nayana AJ", url: "https://orcid.org/0000-0002-8070-5400" }],
+  authors: [
+    { name: "Dr. Nayana AJ", url: "https://orcid.org/0000-0002-8070-5400" },
+  ],
   creator: "Dr. Nayana AJ",
   publisher: "Dr. Nayana AJ",
   robots: {
@@ -84,12 +86,13 @@ export const metadata: Metadata = {
   classification: "Academic Portfolio",
   other: {
     "academic-field": "Astrophysics",
-    "research-focus": "Explosive Transients, Supernovae, Multi-wavelength Astronomy",
+    "research-focus":
+      "Explosive Transients, Supernovae, Multi-wavelength Astronomy",
     institution: "University of California, Berkeley",
     orcid: "0000-0002-8070-5400",
   },
-    generator: 'v0.dev'
-}
+  generator: "v0.dev",
+};
 
 // JSON-LD Structured Data
 const jsonLd = {
@@ -132,18 +135,18 @@ const jsonLd = {
     addressRegion: "MA",
     addressCountry: "US",
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
         {/* Preload critical resources */}
-        <link rel="preload" href="/assets/documents/Nayana_AJ_CV.pdf" as="document" />
+        <link rel="preload" href="/documents/Nayana_AJ_CV.pdf" as="document" />
 
         {/* DNS prefetch for external domains */}
         <link rel="dns-prefetch" href="//ui.adsabs.harvard.edu" />
@@ -151,7 +154,10 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//orcid.org" />
 
         {/* Structured Data */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
 
         {/* Additional meta tags for performance */}
         <meta name="theme-color" content="#9333ea" />
@@ -160,9 +166,15 @@ export default function RootLayout({
 
         {/* Academic-specific meta tags */}
         <meta name="citation_author" content="Nayana, A. J." />
-        <meta name="citation_author_institution" content="University of California, Berkeley" />
+        <meta
+          name="citation_author_institution"
+          content="University of California, Berkeley"
+        />
         <meta name="DC.creator" content="Nayana, A. J." />
-        <meta name="DC.subject" content="Astrophysics; Supernovae; Gamma-ray Bursts; Explosive Transients" />
+        <meta
+          name="DC.subject"
+          content="Astrophysics; Supernovae; Gamma-ray Bursts; Explosive Transients"
+        />
 
         {/* Favicon and app icons */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -174,5 +186,5 @@ export default function RootLayout({
         <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
       </body>
     </html>
-  )
+  );
 }
