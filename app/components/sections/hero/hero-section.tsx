@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { ChevronDown } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import Image from "next/image"
-import { usePortfolio } from "../../../contexts/portfolio-context"
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
+import Image from "next/image";
+import { usePortfolio } from "../../../contexts/portfolio-context";
 
 interface HeroSectionProps {
-  scrollToSection: (sectionId: string) => void
+  scrollToSection: (sectionId: string) => void;
 }
 
 export function HeroSection({ scrollToSection }: HeroSectionProps) {
-  const { data } = usePortfolio()
+  const { data } = usePortfolio();
 
   return (
     <section
@@ -32,7 +32,10 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
             transition={{ delay: 0.2, duration: 0.5 }}
           >
             <Image
-              src={data.personal.profileImage || "/placeholder.svg?height=200&width=200&query=profile"}
+              src={
+                data.personal.profileImage ||
+                "/placeholder.svg?height=200&width=200&query=profile"
+              }
               alt="Profile"
               width={200}
               height={200}
@@ -71,15 +74,17 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
             {data.personal.bio}
           </motion.p>
 
-          <motion.p
-            className="text-base sm:text-lg mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed px-4"
-            style={{ color: "var(--theme-text-secondary)" }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
-          >
-            {data.personal.bioSub}
-          </motion.p>
+          {data.personal?.bioSub && (
+            <motion.p
+              className="text-base sm:text-lg mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed px-4"
+              style={{ color: "var(--theme-text-secondary)" }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8, duration: 0.8 }}
+            >
+              {data.personal?.bioSub}
+            </motion.p>
+          )}
 
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4"
@@ -113,5 +118,5 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
         <ChevronDown className="w-8 h-8" />
       </motion.div>
     </section>
-  )
+  );
 }

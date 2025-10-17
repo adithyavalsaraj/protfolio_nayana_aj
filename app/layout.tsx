@@ -12,7 +12,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Dr. Nayana AJ - Astrophysicist & Researcher",
+    default: "Dr. Nayana AJ - Astrophysicist",
     template: "%s | Dr. Nayana AJ",
   },
   description:
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://your-actual-domain.com",
-    title: "Dr. Nayana AJ - Astrophysicist & Researcher",
+    title: "Dr. Nayana AJ - Astrophysicist",
     description:
       "Professional portfolio showcasing cutting-edge research in explosive transients, supernovae, and multi-wavelength astrophysics by Dr. Nayana AJ, Postdoctoral Scholar at UC Berkeley.",
     siteName: "Dr. Nayana AJ Portfolio",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dr. Nayana AJ - Astrophysicist & Researcher",
+    title: "Dr. Nayana AJ - Astrophysicist",
     description:
       "Professional portfolio showcasing cutting-edge research in explosive transients and stellar astrophysics.",
     images: ["/og-image.jpg"],
