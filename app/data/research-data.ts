@@ -41,4 +41,4 @@ export const researchData = [
       "Investigating optical and multi-wavelength follow-up observations of gravitational wave sources, particularly neutron star mergers and their kilonova signatures.",
     image: "/placeholder.svg?height=300&width=400",
   },
-]
+];

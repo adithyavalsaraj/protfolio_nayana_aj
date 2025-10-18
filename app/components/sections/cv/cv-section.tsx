@@ -1,10 +1,8 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { Download, FileText } from "lucide-react";
+import { Download } from "lucide-react";
 import { usePortfolio } from "../../../contexts/portfolio-context";
 
 export function CVSection() {
@@ -31,12 +29,11 @@ export function CVSection() {
           viewport={{ once: true }}
           className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 theme-gradient-text">
+          {/* <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 theme-gradient-text">
             Experience
-          </h2>
-
+          </h2> */}
           {/* CV Description */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -63,8 +60,7 @@ export function CVSection() {
               publications, conference presentations, awards, and professional
               activities in astrophysics and stellar evolution research.
             </p>
-          </motion.div>
-
+          </motion.div> */}
           {/* CV Download Button */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -81,9 +77,8 @@ export function CVSection() {
               Download Full CV
             </Button>
           </motion.div>
-
-          {/* CV Stats - Dynamic Values */}
-          <motion.div
+          {/* <motion.div> CV Stats - Dynamic Values</motion.div> */}
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -125,10 +120,10 @@ export function CVSection() {
                 Citations
               </div>
             </div>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
 
-        <div className="max-w-4xl mx-auto">
+        {/* <div className="max-w-4xl mx-auto">
           {data.experience.map((exp, index) => (
             <motion.div
               key={exp.id}
@@ -160,7 +155,7 @@ export function CVSection() {
               </Card>
             </motion.div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

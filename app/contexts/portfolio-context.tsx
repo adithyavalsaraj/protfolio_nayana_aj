@@ -8,11 +8,11 @@ export interface PortfolioData {
     name: string;
     title: string;
     email: string[];
-    location: string;
+    location?: string;
     bio: string;
     bioSub?: string;
     profileImage: string;
-    social: Array<{
+    social?: Array<{
       id: string;
       title: string;
       url: string;
