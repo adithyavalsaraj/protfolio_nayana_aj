@@ -3,6 +3,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { sortPublicationsByDate } from "@/lib/utils";
 import clsx from "clsx";
 import { motion, useInView } from "framer-motion";
 import { ExternalLink, Eye } from "lucide-react";
@@ -229,7 +230,7 @@ export function PublicationTimeline({
 
   // Memoize sorted publications and year markers
   const { sortedPublications, yearMarkers } = useMemo(() => {
-    const sorted = filteredPublications.sort((a, b) => b.year - a.year);
+    const sorted = sortPublicationsByDate(filteredPublications);
 
     // Calculate year markers with proper spacing
     const markers = sorted.reduce((acc, publication, index) => {
@@ -249,7 +250,9 @@ export function PublicationTimeline({
 
   // Memoize author highlighting function
   const highlightAuthorName = useMemo(() => {
-    return (authors: string) => {
+    return (authors?: string) => {
+      if (!authors || typeof authors !== "string") return "";
+
       const nameVariations = [
         "Nayana, A. J.",
         "Nayana A. J.",

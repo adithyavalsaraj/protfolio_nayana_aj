@@ -1,16 +1,26 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Sun, Moon, Menu, X, Home, BookOpen, Atom, User, Mail } from "lucide-react"
-import { usePortfolio } from "../../contexts/portfolio-context"
+import { motion } from "framer-motion";
+import {
+  BookOpenText,
+  FileUser,
+  Home,
+  Mail,
+  Menu,
+  Moon,
+  Star,
+  Sun,
+  X,
+} from "lucide-react";
+import { usePortfolio } from "../../contexts/portfolio-context";
 
 interface NavigationProps {
-  activeSection: string
-  mobileMenuOpen: boolean
-  setMobileMenuOpen: (open: boolean) => void
-  scrollToSection: (sectionId: string) => void
-  theme: string
-  toggleTheme: () => void
+  activeSection: string;
+  mobileMenuOpen: boolean;
+  setMobileMenuOpen: (open: boolean) => void;
+  scrollToSection: (sectionId: string) => void;
+  theme: string;
+  toggleTheme: () => void;
 }
 
 export function Navigation({
@@ -21,15 +31,15 @@ export function Navigation({
   theme,
   toggleTheme,
 }: NavigationProps) {
-  const { data } = usePortfolio()
+  const { data } = usePortfolio();
 
   const navigationItems = [
     { id: "home", label: "Home", icon: Home },
-    { id: "publications", label: "Publications", icon: BookOpen },
-    { id: "research", label: "Research Interests", icon: Atom },
-    { id: "cv", label: "CV", icon: User },
+    { id: "publications", label: "Publications", icon: BookOpenText },
+    { id: "research", label: "Research Interests", icon: Star },
+    { id: "cv", label: "CV", icon: FileUser },
     { id: "contact", label: "Contact", icon: Mail },
-  ]
+  ];
 
   return (
     <motion.nav
@@ -40,7 +50,10 @@ export function Navigation({
     >
       <div className="container mx-auto px-4 sm:px-6 py-4">
         <div className="flex items-center justify-between">
-          <motion.div className="text-lg sm:text-xl font-bold theme-gradient-text" whileHover={{ scale: 1.05 }}>
+          <motion.div
+            className="text-lg sm:text-xl font-bold theme-gradient-text"
+            whileHover={{ scale: 1.05 }}
+          >
             {data.personal.name}
           </motion.div>
 
@@ -52,8 +65,16 @@ export function Navigation({
                 onClick={() => scrollToSection(id)}
                 className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors text-sm xl:text-base ${
                   activeSection === id
-                    ? `${theme === "dark" ? "bg-purple-600/30 text-purple-300" : "bg-blue-100 text-blue-700"}`
-                    : `${theme === "dark" ? "text-gray-300 hover:text-white hover:bg-purple-600/20" : "text-gray-600 hover:text-blue-700 hover:bg-blue-50"}`
+                    ? `${
+                        theme === "dark"
+                          ? "bg-purple-600/30 text-purple-300"
+                          : "bg-blue-100 text-blue-700"
+                      }`
+                    : `${
+                        theme === "dark"
+                          ? "text-gray-300 hover:text-white hover:bg-purple-600/20"
+                          : "text-gray-600 hover:text-blue-700 hover:bg-blue-50"
+                      }`
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -74,11 +95,19 @@ export function Navigation({
               whileTap={{ scale: 0.95 }}
             >
               {theme === "dark" ? (
-                <motion.div initial={{ rotate: -45 }} animate={{ rotate: 0 }} transition={{ duration: 0.3 }}>
+                <motion.div
+                  initial={{ rotate: -45 }}
+                  animate={{ rotate: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
                   <Sun className="w-5 h-5" />
                 </motion.div>
               ) : (
-                <motion.div initial={{ rotate: 45 }} animate={{ rotate: 0 }} transition={{ duration: 0.3 }}>
+                <motion.div
+                  initial={{ rotate: 45 }}
+                  animate={{ rotate: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
                   <Moon className="w-5 h-5" />
                 </motion.div>
               )}
@@ -98,7 +127,11 @@ export function Navigation({
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
-              {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+              {theme === "dark" ? (
+                <Sun className="w-5 h-5" />
+              ) : (
+                <Moon className="w-5 h-5" />
+              )}
             </motion.button>
             <button
               className={`p-2 rounded-md ${
@@ -108,7 +141,11 @@ export function Navigation({
               }`}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -129,8 +166,16 @@ export function Navigation({
                   onClick={() => scrollToSection(id)}
                   className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
                     activeSection === id
-                      ? `${theme === "dark" ? "bg-purple-600/30 text-purple-300" : "bg-blue-100 text-blue-700"}`
-                      : `${theme === "dark" ? "text-gray-300 hover:text-white hover:bg-purple-600/20" : "text-gray-600 hover:text-blue-700 hover:bg-blue-50"}`
+                      ? `${
+                          theme === "dark"
+                            ? "bg-purple-600/30 text-purple-300"
+                            : "bg-blue-100 text-blue-700"
+                        }`
+                      : `${
+                          theme === "dark"
+                            ? "text-gray-300 hover:text-white hover:bg-purple-600/20"
+                            : "text-gray-600 hover:text-blue-700 hover:bg-blue-50"
+                        }`
                   }`}
                 >
                   <Icon className="w-5 h-5" />
@@ -142,5 +187,5 @@ export function Navigation({
         )}
       </div>
     </motion.nav>
-  )
+  );
 }

@@ -1,9 +1,9 @@
 // Complete publications data - single source of truth
 export const publicationsData = [
-  // 2024 Publications
   {
     id: "1",
-    title: "Shock-driven synchrotron radio emission from the 2021 outburst of RS Ophiuchi",
+    title:
+      "Shock-driven synchrotron radio emission from the 2021 outburst of RS Ophiuchi",
     authors:
       "Nayana, A. J.; Anupama, G. C.; Roy, Nirupam; Banerjee, Dipankar P. K.; Singh, Kulinder Pal; Sonith, L. S.; Kamath, U. S.",
     journal: "MNRAS",
@@ -14,12 +14,14 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://ui.adsabs.harvard.edu/abs/2024MNRAS.528.5528N/abstract",
+    authorRole: "Lead",
   },
   {
     id: "2",
     title:
       "VLBA-uGMRT search for candidate binary black holes: Study of six X-shaped radio galaxies with double-peaked emission lines",
-    authors: "Biny Sebastian, Anderson Caproni, Preeti Kharb, Nayana A.J., Arshi Ali et al.",
+    authors:
+      "Biny Sebastian; Anderson Caproni; Preeti Kharb; Nayana A.J.; Arshi Ali; et al.",
     journal: "MNRAS",
     year: 2024,
     date: "2024 February 21",
@@ -28,11 +30,13 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://ui.adsabs.harvard.edu/abs/2024MNRAS.tmp..599S/abstract",
+    authorRole: "CoAuthor",
   },
   {
     id: "3",
     title: "Chandra's Insights into SN 2023ixf",
-    authors: "Poonam Chandra, Roger A. Chevalier, Keiichi Maeda, Alak K. Ray, and Nayana A. J.",
+    authors:
+      "Poonam Chandra; Roger A. Chevalier; Keiichi Maeda; Alak K. Ray; Nayana A. J.",
     journal: "ApJ Letters",
     year: 2024,
     date: "2024 March 1",
@@ -41,13 +45,14 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://ui.adsabs.harvard.edu/abs/2024ApJ...963L...4C/abstract",
+    authorRole: "CoAuthor",
   },
   {
     id: "4",
     title:
       "Roaring to Softly Whispering: X-Ray Emission after ∼3.7 yr at the Location of the Transient AT2018cow and Implications for Accretion-powered Scenarios",
     authors:
-      "Giulia Migliori, R. Margutti, B. D. Metzger, R. Chornock, Vignali, C, Brethauer, D, Coppejans, D.L., et al. including Nayana A.J.",
+      "Giulia Migliori; R. Margutti; B. D. Metzger; R. Chornock; Vignali, C.; Brethauer, D.; Coppejans, D. L.; et al. including Nayana A.J.",
     journal: "ApJ Letters",
     year: 2024,
     date: "2024 March 1",
@@ -56,12 +61,13 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://ui.adsabs.harvard.edu/abs/2024ApJ...963L..24M/abstract",
+    authorRole: "CoAuthor",
   },
-  // 2023 Publications
   {
     id: "5",
     title: "Lepto-hadronic Interpretation of 2021 RS Ophiuchi Nova Outburst",
-    authors: "Agnibha de Sarkar, Nayana A.J.; Nirupam Roy; Razzaque, Soebur; and G.C. Anupama",
+    authors:
+      "Agnibha de Sarkar; Nayana A.J.; Nirupam Roy; Soebur Razzaque; G. C. Anupama",
     journal: "ApJ",
     year: 2023,
     date: "2023 July 1",
@@ -70,12 +76,13 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://iopscience.iop.org/article/10.3847/1538-4357/acd6ed/pdf",
+    authorRole: "Second",
   },
   {
     id: "6",
     title: "Minutes-duration Optical Flares with Supernova Luminosities",
     authors:
-      "Anna Y. Q. Ho; Daniel A. Perley; Ping Chen; Steve Schulze; Vik Dhillon; Harsh Kumar and co-authors including Nayana A.J.",
+      "Anna Y. Q. Ho; Daniel A. Perley; Ping Chen; Steve Schulze; Vik Dhillon; Harsh Kumar; et al. including Nayana A.J.",
     journal: "Nature",
     year: 2023,
     date: "2023 November 15",
@@ -84,13 +91,14 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://www.nature.com/articles/s41586-023-06673-6",
+    authorRole: "CoAuthor",
   },
   {
     id: "7",
     title:
       "AT2019wxt: An ultra-stripped supernova candidate discovered in electromagnetic follow-up of a gravitational wave trigger",
     authors:
-      "Hinna Shivkumar, Amruta D. Jaodand, Arvind Balasubramanian, Christoffer Fremling and co-authors including Nayana A.J.",
+      "Hinna Shivkumar; Amruta D. Jaodand; Arvind Balasubramanian; Christoffer Fremling; et al. including Nayana A.J.",
     journal: "ApJ",
     year: 2023,
     date: "2023 July 20",
@@ -99,11 +107,14 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://iopscience.iop.org/article/10.3847/1538-4357/acd5d5/pdf",
+    authorRole: "CoAuthor",
   },
   {
     id: "8",
-    title: "Bridging between Type IIb and Ib Supernovae: SN IIb 2022crv with a Very Thin Hydrogen Envelope",
-    authors: "Anjasha Gangopadhyay; Keiichi Maeda; Avinash Singh; Nayana A. J.; Tatsuya Nakaoka and co-authors",
+    title:
+      "Bridging between Type IIb and Ib Supernovae: SN IIb 2022crv with a Very Thin Hydrogen Envelope",
+    authors:
+      "Anjasha Gangopadhyay; Keiichi Maeda; Avinash Singh; Nayana A. J.; Tatsuya Nakaoka; et al.",
     journal: "ApJ",
     year: 2023,
     date: "2023 November 10",
@@ -112,13 +123,14 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://iopscience.iop.org/article/10.3847/1538-4357/acd5d5/pdf",
+    authorRole: "CoAuthor",
   },
   {
     id: "9",
     title:
       "Far-ultraviolet to Near-infrared Observations of SN 2023ixf: A High-energy Explosion Engulfed in Complex Circumstellar Material",
     authors:
-      "Rishabh Singh Teja; Avinash Singh; Judhajeet Basu; G. C. Anupama; D. K. Sahu; and co-authors including Nayana A. J.",
+      "Rishabh Singh Teja; Avinash Singh; Judhajeet Basu; G. C. Anupama; D. K. Sahu; et al. including Nayana A. J.",
     journal: "ApJ",
     year: 2023,
     date: "2023 September 1",
@@ -127,12 +139,12 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://iopscience.iop.org/article/10.3847/2041-8213/acef20/pdf",
+    authorRole: "CoAuthor",
   },
-  // 2022 Publications
   {
     id: "10",
     title: "Radio evolution of a type IIb supernova SN 2016gkg",
-    authors: "Nayana A.J.; Poonam Chandra; Anoop Krishna; and G.C. Anupama",
+    authors: "Nayana A.J.; Poonam Chandra; Anoop Krishna; G.C. Anupama",
     journal: "ApJ",
     year: 2022,
     date: "2022 August 1",
@@ -141,12 +153,14 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://iopscience.iop.org/article/10.3847/1538-4357/ac7c1e/pdf",
+    authorRole: "Lead",
   },
   {
     id: "11",
-    title: "Optical discovery of a relativistic jet from the tidal disruption of a star by a supermassive black hole",
+    title:
+      "Optical discovery of a relativistic jet from the tidal disruption of a star by a supermassive black hole",
     authors:
-      "Igor Andreoni; Michael W. Coughlin; Daniel A. Perley; Yuhan Yao; Wenbin Lu, S; Bradley Cenko et al. including Nayana A.J.",
+      "Igor Andreoni; Michael W. Coughlin; Daniel A. Perley; Yuhan Yao; Wenbin Lu; S.; Bradley Cenko; et al. including Nayana A.J.",
     journal: "Nature",
     year: 2022,
     date: "2022 November 30",
@@ -155,13 +169,14 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://www.nature.com/articles/s41586-022-05465-8",
+    authorRole: "CoAuthor",
   },
   {
     id: "12",
     title:
       "The X-ray and Radio Loud Fast Blue Optical Transient AT2020mrf: Implications for an Emerging Class of Engine-Driven Massive Star Explosions",
     authors:
-      "Yuhan Yao; Anna Y. Q. Ho; Pavel Medvedev; Nayana A. J.; Daniel A. Perley; S. R. Kulkarni; Poonam Chandra; Sergey Sazonov; Marat Gilfanov et al.",
+      "Yuhan Yao; Anna Y. Q. Ho; Pavel Medvedev; Nayana A. J.; Daniel A. Perley; S. R. Kulkarni; Poonam Chandra; Sergey Sazonov; Marat Gilfanov; et al.",
     journal: "ApJ",
     year: 2022,
     date: "2022 August 1",
@@ -170,11 +185,14 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://iopscience.iop.org/article/10.3847/1538-4357/ac7a41/pdf",
+    authorRole: "CoAuthor",
   },
   {
     id: "13",
-    title: "SN 2020jfo: A short plateau Type II supernova from a low mass progenitor",
-    authors: "Rishabh Singh Teja, Avinash Singh, D.K. Sahu, G.C. Anupama, Brajesh Kumar, and Nayana A.J.",
+    title:
+      "SN 2020jfo: A short plateau Type II supernova from a low mass progenitor",
+    authors:
+      "Rishabh Singh Teja; Avinash Singh; D.K. Sahu; G.C. Anupama; Brajesh Kumar; Nayana A.J.",
     journal: "ApJ",
     year: 2022,
     date: "2022 May 1",
@@ -183,12 +201,13 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://iopscience.iop.org/article/10.3847/1538-4357/ac610b/pdf",
+    authorRole: "CoAuthor",
   },
   {
     id: "14",
     title: "SN 2020sck: deflagration in a carbon-oxygen white dwarf",
     authors:
-      "Anirban Dutta; Dutta, Anirban; D.K. Sahu; G. C. Anupama; Simran Joharle; Brajesh Kumar; Nayana A J; Avinash Singh; Harsh Kumar; Varun Bhalerao; and Sudhansu Barway",
+      "Anirban Dutta; D.K. Sahu; G. C. Anupama; Simran Joharle; Brajesh Kumar; Nayana A J; Avinash Singh; Harsh Kumar; Varun Bhalerao; Sudhansu Barway",
     journal: "ApJ",
     year: 2022,
     date: "2022 February 1",
@@ -197,13 +216,13 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://iopscience.iop.org/article/10.3847/1538-4357/ac366f",
+    authorRole: "CoAuthor",
   },
-  // 2021 Publications
   {
     id: "15",
     title: "uGMRT observations of a Fast Blue Optical Transient, AT2018cow",
     authors: "Nayana A.J. and Poonam Chandra",
-    journal: "ApJL",
+    journal: "ApJ Letters",
     year: 2021,
     date: "2021 May",
     doi: "10.3847/2041-8213/abf2c4",
@@ -211,13 +230,14 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://ui.adsabs.harvard.edu/abs/2021arXiv210306008N/abstract",
+    authorRole: "Lead",
   },
   {
     id: "16",
     title:
       "The Panchromatic Afterglow of GW170817: The full uniform dataset, modeling, comparison with previous results and implications",
     authors:
-      "Makhathini, S; Mooley, K.P; Brightman, Murray; Hotokezaka, K; Nayana A.J.; Intema, Huib T; Dobie, Dougal et al",
+      "Makhathini, S; Mooley, K.P; Brightman, Murray; Hotokezaka, K; Nayana A.J.; Intema, Huib T; Dobie, Dougal; et al.",
     journal: "ApJ",
     year: 2021,
     date: "2021 December 1",
@@ -226,14 +246,14 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://ui.adsabs.harvard.edu/abs/2021ApJ...922..154M/abstract",
+    authorRole: "CoAuthor",
   },
-  // 2020 Publications
   {
     id: "17",
     title:
-      "ALMA observations of HCO$^{+}$ and HCN emission in a massive star-forming region N55 of the Large Magellanic Cloud",
+      "ALMA observations of HCO+ and HCN emission in a massive star-forming region N55 of the Large Magellanic Cloud",
     authors:
-      "Nayana A.J.; Naslim, N; Onishi, T, Kemper, F; Tokuda, K; Madden, S.C; Morata, O; Nasri, S ,and Galametz, M",
+      "Nayana A.J.; Naslim, N; Onishi, T; Kemper, F; Tokuda, K; Madden, S.C; Morata, O; Nasri, S; Galametz, M",
     journal: "ApJ",
     year: 2020,
     date: "2020 October 21",
@@ -242,6 +262,7 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://ui.adsabs.harvard.edu/abs/2020ApJ...902..140N/abstract",
+    authorRole: "Lead",
   },
   {
     id: "18",
@@ -255,14 +276,15 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://ui.adsabs.harvard.edu/abs/2020MNRAS.494...84N/abstract",
+    authorRole: "Lead",
   },
   {
     id: "19",
     title:
       "A Mildly Relativistic Outflow from the Energetic, Fast-rising Blue Optical Transient CSS161010 in a Dwarf Galaxy",
     authors:
-      "Coppejans, D.L; Margutti, R; Terreran, G; Nayana A.J.; Coughlin, E.R.; Laskar, T; Alexander, K.D.; Bietenholz, M; Caprioli, D; Chandra, P. et al.",
-    journal: "ApJL",
+      "Coppejans, D.L; Margutti, R; Terreran, G; Nayana A.J.; Coughlin, E.R.; Laskar, T; Alexander, K.D.; Bietenholz, M; Caprioli, D; Chandra, P.; et al.",
+    journal: "ApJ Letters",
     year: 2020,
     date: "2020 May 26",
     doi: "10.3847/2041-8213/ab8cc7",
@@ -270,14 +292,14 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://ui.adsabs.harvard.edu/abs/2020ApJ...895L..23C/abstract",
+    authorRole: "CoAuthor",
   },
-  // 2019 Publications
   {
     id: "20",
     title:
       "Radio Observations of Type Ib Supernova Master OT J120451.50+265946.6 reveal inhomogeneous emitting region crossing through a dense shell",
     authors:
-      "Poonam Chandra; Nayana A.J.; C.-T, Bjornsson; Peter Lundqvist; Subo Dong; Alak K. ray; Jose L. Prieto; and Benjamin J. Shappee",
+      "Poonam Chandra; Nayana A.J.; C.-T, Bjornsson; Peter Lundqvist; Subo Dong; Alak K. ray; Jose L. Prieto; Benjamin J. Shappee",
     journal: "ApJ",
     year: 2019,
     date: "2019 June 1",
@@ -286,11 +308,12 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://ui.adsabs.harvard.edu/abs/2019ApJ...877...79C/abstract",
+    authorRole: "Second",
   },
-  // 2018 Publications
   {
     id: "21",
-    title: "Long-term behavior of a Type IIP Supernova SN 2004dj in the radio bands",
+    title:
+      "Long-term behavior of a Type IIP Supernova SN 2004dj in the radio bands",
     authors: "Nayana A.J.; Poonam Chandra and Alak K. Ray",
     journal: "ApJ",
     year: 2018,
@@ -300,13 +323,14 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://ui.adsabs.harvard.edu/abs/2018arXiv180800283J/abstract",
+    authorRole: "Lead",
   },
   {
     id: "22",
     title: "A strong jet signature in the late-time light curve of GW170817",
     authors:
-      "K.P. Mooley; D.A. Frail; D. Dobie; E. Lenc; A. Corsi; K. DE; A.J. Nayana; S. Makhathini; I. Heywood; T. Murphy; D. L. Kaplan; P. Chandra; O. Smirnov; E. Nakar; G. Hallinan; F. Camilo; R. Fender; S. Goedhart; P. Groot et al.",
-    journal: "ApJL",
+      "K.P. Mooley; D.A. Frail; D. Dobie; E. Lenc; A. Corsi; K. DE; A.J. Nayana; S. Makhathini; I. Heywood; T. Murphy; D. L. Kaplan; P. Chandra; O. Smirnov; E. Nakar; G. Hallinan; F. Camilo; R. Fender; S. Goedhart; P. Groot; et al.",
+    journal: "ApJ Letters",
     year: 2018,
     date: "2018 November 20",
     doi: "10.3847/2041-8213/aaf00d",
@@ -314,13 +338,14 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://ui.adsabs.harvard.edu/abs/2018ApJ...868L..11M/abstract",
+    authorRole: "CoAuthor",
   },
-  // 2017 Publications
   {
     id: "23",
-    title: "325 and 610 MHz Radio Counterparts of SNR G353.6$-$0.7 a.k.a HESS J1731$-$347",
+    title:
+      "325 and 610 MHz Radio Counterparts of SNR G353.6−0.7 a.k.a HESS J1731−347",
     authors:
-      "Nayana A.J.; Chandra, Poonam; Roy, Subhashis; Green, David A; Acero, Fabio; Lemoine-Goumard, Marianne; Marcowith, Alexandre; Ray, Alak K, and Renaud, Matthieu",
+      "Nayana A.J.; Chandra, Poonam; Roy, Subhashis; Green, David A; Acero, Fabio; Lemoine-Goumard, Marianne; Marcowith, Alexandre; Ray, Alak K; Renaud, Matthieu",
     journal: "MNRAS",
     year: 2017,
     date: "2017 January 11",
@@ -329,5 +354,259 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://ui.adsabs.harvard.edu/abs/2017MNRAS.467..155N/abstract",
+    authorRole: "Lead",
   },
-]
+  {
+    id: "24",
+    title:
+      "The Most Luminous Known Fast Blue Optical Transient AT 2024wpp: Unprecedented Evolution and Properties in the X-rays and Radio",
+    authors: "Nayana, A. J.; Margutti, Raffaella; Wiston, Eli; et al.",
+    journal: "ApJ Letters (in press)",
+    year: 2025,
+    date: "",
+    doi: "",
+    type: "Research Article",
+    fileData: "",
+    fileType: "",
+    adsUrl: "https://ui.adsabs.harvard.edu/abs/2025arXiv250900952N/abstract",
+    authorRole: "Lead",
+  },
+  {
+    id: "25",
+    title:
+      "Dinosaur in a Haystack: X-ray View of the Entrails of SN 2023ixf and the Radio Afterglow of Its Interaction with the Medium Spawned by the Progenitor Star (Paper 1)",
+    authors:
+      "Nayana, A. J.; Margutti, Raffaella; Wiston, Eli; Chornock, Ryan; et al.",
+    journal: "ApJ 985:51",
+    year: 2025,
+    date: "2025 May 20",
+    doi: "10.3847/1538-4357/adc2fb",
+    type: "Research Article",
+    fileData: "",
+    fileType: "",
+    adsUrl: "https://iopscience.iop.org/article/10.3847/1538-4357/adc2fb",
+    authorRole: "Lead",
+  },
+  {
+    id: "26",
+    title:
+      "The first radio view of a type Ibn supernova in SN 2023fyq: Understanding the mass-loss history in the last decade before the explosion",
+    authors:
+      "Baer-way, Raphael; Nayana, A. J.; Jacobson-Galan, Wynn; Chandra, Poonam",
+    journal: "ApJ Letters (under review)",
+    year: 2025,
+    date: "",
+    doi: "",
+    type: "Research Article",
+    fileData: "",
+    fileType: "",
+    adsUrl: "https://ui.adsabs.harvard.edu/abs/2025arXiv250907080B/abstract",
+    authorRole: "Second",
+  },
+  {
+    id: "27",
+    title:
+      "The Most Luminous Known Fast Blue Optical Transient AT 2024wpp: Unprecedented Evolution and Properties in the Ultraviolet to the Near-Infrared",
+    authors:
+      "LeBaron, Natalie; Margutti, Raffaella; Chornock, Ryan; Nayana, A. J.; et al.",
+    journal: "ApJ Letters (under review)",
+    year: 2025,
+    date: "",
+    doi: "",
+    type: "Research Article",
+    fileData: "",
+    fileType: "",
+    adsUrl: "https://ui.adsabs.harvard.edu/abs/2025arXiv250718783C/abstract",
+    authorRole: "CoAuthor",
+  },
+  {
+    id: "28",
+    title: "The La Silla Schmidt Southern Survey",
+    authors:
+      "Miller, Adam A.; Abrams, Natasha S.; Aldering, Greg; Anand, Shreya; Nayana, A. J.; et al.",
+    journal: "PASP (under review)",
+    year: 2025,
+    date: "",
+    doi: "",
+    type: "Research Article",
+    fileData: "",
+    fileType: "",
+    adsUrl: "https://ui.adsabs.harvard.edu/abs/2025arXiv250314579M/abstract",
+    authorRole: "CoAuthor",
+  },
+  {
+    id: "29",
+    title:
+      "SVOM GRB 250314A at z ≃ 7.3: an exploding star in the era of reionization",
+    authors:
+      "Cordier, B.; Wei, J. Y.; Tanvir, N. R.; Vergan, S. D.; Nayana, A. J.; et al.",
+    journal: "A&A (under review)",
+    year: 2025,
+    date: "",
+    doi: "",
+    type: "Research Article",
+    fileData: "",
+    fileType: "",
+    adsUrl: "https://ui.adsabs.harvard.edu/abs/2025arXiv250718783C/abstract",
+    authorRole: "CoAuthor",
+  },
+  {
+    id: "30",
+    title:
+      "Optically Overluminous Tidal Disruption Events: Outflow Properties and Implications for Extremely Relativistic Disruptions",
+    authors:
+      "Yao, Yuhan; Alexander, Kate D.; Lu, Wenbin; Somalwar, Jean J.; Nayana, A. J.; et al.",
+    journal: "ApJ Letters (in press)",
+    year: 2025,
+    date: "",
+    doi: "",
+    type: "Research Article",
+    fileData: "",
+    fileType: "",
+    adsUrl: "https://ui.adsabs.harvard.edu/abs/2025arXiv250706453Y/abstract",
+    authorRole: "CoAuthor",
+  },
+  {
+    id: "31",
+    title:
+      "The First Radio-Bright Off-Nuclear TDE 2024tvd Reveals the Fastest-Evolving Double-Peaked Radio Emission",
+    authors:
+      "Sfaradi, Itai; Margutti, Raffaella; Chornock, Ryan; Alexander, Kate D.; Nayana, A. J.; et al.",
+    journal: "ApJ Letters (in press)",
+    year: 2025,
+    date: "",
+    doi: "",
+    type: "Research Article",
+    fileData: "",
+    fileType: "",
+    adsUrl: "https://ui.adsabs.harvard.edu/abs/2025arXiv250803807S/abstract",
+    authorRole: "CoAuthor",
+  },
+  {
+    id: "32",
+    title: "Transients and Time-Domain Astrophysics",
+    authors:
+      "Bhalerao, Varun; Misra, Kuntal; Anupama, G. C.; Iyyani, Shabnam; Nayana, A. J.; et al.",
+    journal: "JAA 46:40",
+    year: 2025,
+    date: "",
+    doi: "10.1007/s12036-025-10073-9",
+    type: "Review Article",
+    fileData: "",
+    fileType: "",
+    adsUrl: "https://link.springer.com/epdf/10.1007/s12036-025-10073-9",
+    authorRole: "CoAuthor",
+  },
+  {
+    id: "33",
+    title:
+      "Rubin ToO 2024: Envisioning the Vera C. Rubin Observatory LSST Target of Opportunity program",
+    authors:
+      "Andreoni, Igor; Margutti, Raffaella; Banovetz, John; Nayana, A. J.; et al.",
+    journal: "arXiv preprint",
+    year: 2025,
+    date: "",
+    doi: "",
+    type: "Research Article",
+    fileData: "",
+    fileType: "",
+    adsUrl: "https://ui.adsabs.harvard.edu/abs/2024arXiv241104793A/abstract",
+    authorRole: "CoAuthor",
+  },
+  {
+    id: "34",
+    title:
+      "Eight Years of Light from ASASSN-15oi: Toward Understanding the Late-time Evolution of TDEs",
+    authors:
+      "Srinivasaragavan, Gokul P.; Perley, Daniel A.; Ho, Anna Y. Q.; O'Connor, Brendan; Nayana, A. J.; et al.",
+    journal: "ApJ 983:29",
+    year: 2025,
+    date: "2025 April 10",
+    doi: "10.3847/1538-4357/adb620",
+    type: "Research Article",
+    fileData: "",
+    fileType: "",
+    adsUrl: "https://iopscience.iop.org/article/10.3847/1538-4357/adb620/pdf",
+    authorRole: "CoAuthor",
+  },
+  {
+    id: "35",
+    title:
+      "Multi-Wavelength Analysis of AT 2023sva: A Luminous Orphan Afterglow With Evidence for a Structured Jet",
+    authors:
+      "Srinivasaragavan, Gokul P.; Perley, Daniel A.; Ho, Anna Y. Q.; Nayana, A. J.; et al.",
+    journal: "MNRAS 538, 351–372",
+    year: 2025,
+    date: "",
+    doi: "",
+    type: "Research Article",
+    fileData: "",
+    fileType: "",
+    adsUrl: "https://ui.adsabs.harvard.edu/abs/2025MNRAS.538..351S/abstract",
+    authorRole: "CoAuthor",
+  },
+  {
+    id: "36",
+    title:
+      "A diverse, overlooked population of Type Ia supernovae exhibiting mid-infrared signatures of delayed circumstellar interaction",
+    authors:
+      "Mo, Geoffrey; De, Kishalay; Wiston, Eli; Nayana, A. J.; Margutti, Raffaella; et al.",
+    journal: "ApJ Letters 980:L33",
+    year: 2025,
+    date: "2025 February 20",
+    doi: "",
+    type: "Research Article",
+    fileData: "",
+    fileType: "",
+    adsUrl: "https://ui.adsabs.harvard.edu/abs/2025ApJ...980L..33M/abstract",
+    authorRole: "CoAuthor",
+  },
+  {
+    id: "37",
+    title:
+      "A Multiwavelength Autopsy of the Interacting IIn Supernova 2020ywx: Tracing its Progenitor Mass-Loss History for 100 Years before Death",
+    authors:
+      "Baer-Way, Raphael; Chandra, Poonam; Modjaz, Maryam; Kumar, Sahana; Pellegrino, Craig; Nayana, A. J.; et al.",
+    journal: "ApJ 983:101",
+    year: 2025,
+    date: "2025 April 20",
+    doi: "",
+    type: "Research Article",
+    fileData: "",
+    fileType: "",
+    adsUrl: "https://ui.adsabs.harvard.edu/abs/2025ApJ...983..101B/abstract",
+    authorRole: "CoAuthor",
+  },
+  {
+    id: "38",
+    title:
+      "The Nature of Optical Afterglows Without Gamma-ray Bursts: Identification of AT2023lcr and Multiwavelength Modeling",
+    authors:
+      "Li, Maggie L.; Ho, Anna Y. Q.; Ryan, Geoffrey; Perley, Daniel A.; Lamb, Gavin P.; Nayana, A. J.",
+    journal: "ApJ 985:124",
+    year: 2025,
+    date: "2025 May 20",
+    doi: "",
+    type: "Research Article",
+    fileData: "",
+    fileType: "",
+    adsUrl: "https://ui.adsabs.harvard.edu/abs/2024arXiv241107973L/abstract",
+    authorRole: "CoAuthor",
+  },
+  {
+    id: "39",
+    title:
+      "Rocking the BOAT: the ups and downs of the long-term radio light curve for GRB 221009A",
+    authors:
+      "Rhodes, L.; Van der Horst, A. J.; Bright, J. S.; Nayana, A. J.; et al.",
+    journal: "arXiv preprint",
+    year: 2024,
+    date: "2024 September",
+    doi: "",
+    type: "Research Article",
+    fileData: "",
+    fileType: "",
+    adsUrl: "https://ui.adsabs.harvard.edu/abs/2024arXiv240816637R/abstract",
+    authorRole: "CoAuthor",
+  },
+];

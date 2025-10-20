@@ -1,21 +1,25 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { usePortfolio } from "../../../contexts/portfolio-context"
+import { motion } from "framer-motion";
+import { usePortfolio } from "../../../contexts/portfolio-context";
 
 export function PublicationStatistics() {
-  const { data } = usePortfolio()
+  const { data } = usePortfolio();
 
-  // Calculate total publications dynamically
-  const totalPublications = data.publications.length
-  const { leadAuthorPapers, totalCitations, hIndex } = data.statistics
+  // ✅ Dynamically calculated values
+  const totalPublications = data?.publications?.length || 0;
+  const leadAuthorPapers =
+    data?.publications?.filter((pub) => pub.authorRole === "Lead").length || 0;
+
+  // Keep other values as-is from your data.statistics
+  const { totalCitations, hIndex } = data.statistics;
 
   const stats = [
     { label: "Total Publications", value: totalPublications },
     { label: "Lead Author Papers", value: leadAuthorPapers },
     { label: "Total Citations", value: totalCitations },
     { label: "h-index", value: hIndex },
-  ]
+  ];
 
   return (
     <motion.div
@@ -36,13 +40,18 @@ export function PublicationStatistics() {
             transition={{ duration: 0.6, delay: index * 0.1 }}
             viewport={{ once: true }}
           >
-            <div className="text-2xl sm:text-3xl font-bold theme-gradient-text mb-2">{stat.value}</div>
-            <div className="text-sm sm:text-base" style={{ color: "var(--theme-text-secondary)" }}>
+            <div className="text-2xl sm:text-3xl font-bold theme-gradient-text mb-2">
+              {stat.value}
+            </div>
+            <div
+              className="text-sm sm:text-base"
+              style={{ color: "var(--theme-text-secondary)" }}
+            >
               {stat.label}
             </div>
           </motion.div>
         ))}
       </div>
     </motion.div>
-  )
+  );
 }

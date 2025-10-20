@@ -42,6 +42,7 @@ export interface PortfolioData {
     fileData?: string;
     fileType?: string;
     adsUrl?: string;
+    authorRole?: string;
   }>;
   experience: Array<{
     id: string;
