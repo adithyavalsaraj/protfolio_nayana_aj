@@ -18,7 +18,7 @@ export function PublicationStatistics() {
   const publications = data?.publications || [];
   const totalPublications = publications.length;
   const leadAuthorPapers = publications.filter(
-    (pub) => pub.authorRole === "Lead"
+    (pub) => pub.authorRole === "First"
   ).length;
 
   // ✅ Fallback values from manual data
