@@ -21,7 +21,7 @@ export function PublicationsSection({
   const { data } = usePortfolio();
   const [searchQuery, setSearchQuery] = useState("");
   const [authorRole, setAuthorRole] = useState<
-    "All" | "Lead" | "Second" | "CoAuthor"
+    "All" | "First" | "Second" | "CoAuthor"
   >("All");
 
   const query = searchQuery.toLowerCase();
@@ -76,7 +76,7 @@ export function PublicationsSection({
 
           {/* Filter Buttons */}
           <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8">
-            {["All", "Lead", "Second", "CoAuthor"].map((role) => (
+            {["All", "First", "Second", "CoAuthor"].map((role) => (
               <Button
                 key={role}
                 onClick={() => setAuthorRole(role as any)}

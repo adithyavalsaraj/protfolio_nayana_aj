@@ -14,7 +14,7 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://ui.adsabs.harvard.edu/abs/2024MNRAS.528.5528N/abstract",
-    authorRole: "Lead",
+    authorRole: "First",
   },
   {
     id: "2",
@@ -153,7 +153,7 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://iopscience.iop.org/article/10.3847/1538-4357/ac7c1e/pdf",
-    authorRole: "Lead",
+    authorRole: "First",
   },
   {
     id: "11",
@@ -230,7 +230,7 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://ui.adsabs.harvard.edu/abs/2021arXiv210306008N/abstract",
-    authorRole: "Lead",
+    authorRole: "First",
   },
   {
     id: "16",
@@ -262,7 +262,7 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://ui.adsabs.harvard.edu/abs/2020ApJ...902..140N/abstract",
-    authorRole: "Lead",
+    authorRole: "First",
   },
   {
     id: "18",
@@ -276,7 +276,7 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://ui.adsabs.harvard.edu/abs/2020MNRAS.494...84N/abstract",
-    authorRole: "Lead",
+    authorRole: "First",
   },
   {
     id: "19",
@@ -323,7 +323,7 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://ui.adsabs.harvard.edu/abs/2018arXiv180800283J/abstract",
-    authorRole: "Lead",
+    authorRole: "First",
   },
   {
     id: "22",
@@ -354,7 +354,7 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://ui.adsabs.harvard.edu/abs/2017MNRAS.467..155N/abstract",
-    authorRole: "Lead",
+    authorRole: "First",
   },
   {
     id: "24",
@@ -369,7 +369,7 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://ui.adsabs.harvard.edu/abs/2025arXiv250900952N/abstract",
-    authorRole: "Lead",
+    authorRole: "First",
   },
   {
     id: "25",
@@ -385,7 +385,7 @@ export const publicationsData = [
     fileData: "",
     fileType: "",
     adsUrl: "https://iopscience.iop.org/article/10.3847/1538-4357/adc2fb",
-    authorRole: "Lead",
+    authorRole: "First",
   },
   {
     id: "26",

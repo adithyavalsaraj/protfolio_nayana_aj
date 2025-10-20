@@ -58,7 +58,7 @@ export function PublicationStatistics() {
 
   const stats = [
     { label: "Total Publications", value: totalPublications },
-    { label: "Lead Author Papers", value: leadAuthorPapers },
+    { label: "First Author Papers", value: leadAuthorPapers },
     { label: "Total Citations", value: adsStats.totalCitations },
     { label: "h-index", value: adsStats.hIndex },
   ];
