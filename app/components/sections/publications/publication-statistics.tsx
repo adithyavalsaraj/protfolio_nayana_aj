@@ -1,24 +1,66 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { usePortfolio } from "../../../contexts/portfolio-context";
 
 export function PublicationStatistics() {
   const { data } = usePortfolio();
 
-  // ✅ Dynamically calculated values
-  const totalPublications = data?.publications?.length || 0;
-  const leadAuthorPapers =
-    data?.publications?.filter((pub) => pub.authorRole === "Lead").length || 0;
+  const [adsStats, setAdsStats] = useState<{
+    totalCitations: number | string;
+    hIndex: number | string;
+  }>({
+    totalCitations: "—",
+    hIndex: "—",
+  });
 
-  // Keep other values as-is from your data.statistics
-  const { totalCitations, hIndex } = data.statistics;
+  const publications = data?.publications || [];
+  const totalPublications = publications.length;
+  const leadAuthorPapers = publications.filter(
+    (pub) => pub.authorRole === "Lead"
+  ).length;
+
+  // ✅ Fallback values from manual data
+  const fallbackCitations = data?.statistics?.totalCitations ?? "—";
+  const fallbackHIndex = data?.statistics?.hIndex ?? "—";
+
+  useEffect(() => {
+    const fetchADSStats = async () => {
+      try {
+        const res = await fetch("/api/ads/stats");
+        if (!res.ok) throw new Error("API unavailable");
+        const json = await res.json();
+
+        if (json?.totalCitations && json?.hIndex) {
+          setAdsStats({
+            totalCitations: json.totalCitations,
+            hIndex: json.hIndex,
+          });
+        } else {
+          // ✅ Use fallback values when token missing or data incomplete
+          setAdsStats({
+            totalCitations: fallbackCitations,
+            hIndex: fallbackHIndex,
+          });
+        }
+      } catch (err) {
+        console.warn("ADS stats fallback:", err);
+        setAdsStats({
+          totalCitations: fallbackCitations,
+          hIndex: fallbackHIndex,
+        });
+      }
+    };
+
+    fetchADSStats();
+  }, [fallbackCitations, fallbackHIndex]);
 
   const stats = [
     { label: "Total Publications", value: totalPublications },
     { label: "Lead Author Papers", value: leadAuthorPapers },
-    { label: "Total Citations", value: totalCitations },
-    { label: "h-index", value: hIndex },
+    { label: "Total Citations", value: adsStats.totalCitations },
+    { label: "h-index", value: adsStats.hIndex },
   ];
 
   return (

@@ -28,6 +28,7 @@ export interface PortfolioData {
     title: string;
     description: string;
     image: string;
+    paperUrl: string;
   }>;
   publications: Array<{
     id: string;
