@@ -30,6 +30,21 @@ export function ResearchSection() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 theme-gradient-text">
             Research Interests
           </h2>
+          <p>
+            <p
+              className="text-lg sm:text-xl max-w-3xl mx-auto px-4"
+              style={{ color: "var(--theme-text-secondary)" }}
+            >
+              Cosmic Explosions in exquisite detail: Discovery to detailed
+              modeling.
+            </p>
+            <p
+              className="text-lg sm:text-xl max-w-3xl mx-auto px-4"
+              style={{ color: "var(--theme-text-secondary)" }}
+            >
+              FBOTS, Supernovae, Novae and more.
+            </p>
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
