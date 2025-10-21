@@ -257,12 +257,12 @@ export function PublicationsSection({
                 className="text-sm mt-2"
                 style={{ color: "var(--theme-text-secondary)" }}
               >
-                Showing {filteredPublications.length}
+                Showing {filteredPublications.length}{" "}
                 {authorRole === "All"
                   ? "publication"
                   : authorRole === "CoAuthor"
                   ? "co-author"
-                  : `${authorRole.toLowerCase()} author`}
+                  : `${authorRole.toLowerCase()} author`}{" "}
                 {filteredPublications.length !== 1 ? "entries" : "entry"}
               </p>
             )}
