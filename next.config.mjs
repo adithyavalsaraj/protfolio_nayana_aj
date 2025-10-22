@@ -1,28 +1,26 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable static export for portfolio deployment
-  output: 'export',
   trailingSlash: true,
-  
+
   // Image optimization for static export
   images: {
     unoptimized: true,
   },
-  
+
   // Remove experimental features that cause issues
   // experimental: {
   //   optimizeCss: true, // This was causing the 'critters' error
   //   optimizePackageImports: ['lucide-react', 'framer-motion'],
   // },
-  
+
   // Compression
   compress: true,
-  
+
   // Disable server-side features for static export
   async rewrites() {
     return []
   },
-  
+
   // Security headers
   async headers() {
     return [
@@ -45,7 +43,7 @@ const nextConfig = {
       },
     ]
   },
-  
+
   // Webpack optimizations
   webpack: (config, { isServer }) => {
     if (!isServer) {
@@ -56,7 +54,7 @@ const nextConfig = {
     }
     return config
   },
-  
+
   // ESLint and TypeScript configurations
   eslint: {
     ignoreDuringBuilds: true,

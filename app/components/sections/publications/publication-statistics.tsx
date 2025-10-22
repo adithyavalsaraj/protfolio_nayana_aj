@@ -7,10 +7,7 @@ import { usePortfolio } from "../../../contexts/portfolio-context";
 export function PublicationStatistics() {
   const { data } = usePortfolio();
 
-  const [adsStats, setAdsStats] = useState<{
-    totalCitations: number | string;
-    hIndex: number | string;
-  }>({
+  const [adsStats, setAdsStats] = useState({
     totalCitations: "—",
     hIndex: "—",
   });
@@ -21,40 +18,29 @@ export function PublicationStatistics() {
     (pub) => pub.authorRole === "First"
   ).length;
 
-  // ✅ Fallback values from manual data
-  const fallbackCitations = data?.statistics?.totalCitations ?? "—";
-  const fallbackHIndex = data?.statistics?.hIndex ?? "—";
-
   useEffect(() => {
     const fetchADSStats = async () => {
       try {
-        const res = await fetch("/api/ads/stats");
-        if (!res.ok) throw new Error("API unavailable");
-        const json = await res.json();
+        const res = await fetch("/api/ads", { cache: "no-store" });
 
-        if (json?.totalCitations && json?.hIndex) {
-          setAdsStats({
-            totalCitations: json.totalCitations,
-            hIndex: json.hIndex,
-          });
-        } else {
-          // ✅ Use fallback values when token missing or data incomplete
-          setAdsStats({
-            totalCitations: fallbackCitations,
-            hIndex: fallbackHIndex,
-          });
-        }
-      } catch (err) {
-        console.warn("ADS stats fallback:", err);
+        if (!res.ok) throw new Error("ADS API unavailable");
+        const json = await res.json();
         setAdsStats({
-          totalCitations: fallbackCitations,
-          hIndex: fallbackHIndex,
+          totalCitations: json.totalCitations ?? "—",
+          hIndex: json.hIndex ?? "—",
         });
+      } catch (err) {
+        console.error("ADS stats fetch failed:", err);
       }
     };
 
+    // Fetch immediately
     fetchADSStats();
-  }, [fallbackCitations, fallbackHIndex]);
+
+    // Auto-refresh every hour
+    const interval = setInterval(fetchADSStats, 1000 * 60 * 60);
+    return () => clearInterval(interval);
+  }, []);
 
   const stats = [
     { label: "Total Publications", value: totalPublications },

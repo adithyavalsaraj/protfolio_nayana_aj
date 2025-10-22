@@ -1,9 +1,12 @@
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic"; // disables route caching
+
 const ADS_API_URL = "https://api.adsabs.harvard.edu/v1/search/query";
 
 export async function GET() {
-  const token = process.env.NEXT_PUBLIC_ADS_API_TOKEN;
+  const token = process.env.ADS_API_TOKEN;
+
   if (!token) {
     return NextResponse.json(
       { error: "ADS API token missing" },
@@ -12,11 +15,11 @@ export async function GET() {
   }
 
   try {
-    // Fetch citation + h-index summary for your library
     const response = await fetch(
       `${ADS_API_URL}?q=docs(library/ucoKF0gWQImVPLgZJ5pdlw)&fl=citation_count,h_index&rows=200`,
       {
         headers: { Authorization: `Bearer ${token}` },
+        cache: "no-store",
       }
     );
 
@@ -28,7 +31,6 @@ export async function GET() {
       0
     );
 
-    // Approximate h-index calculation
     const sorted = docs
       .map((d: any) => d.citation_count || 0)
       .sort((a: number, b: number) => b - a);
