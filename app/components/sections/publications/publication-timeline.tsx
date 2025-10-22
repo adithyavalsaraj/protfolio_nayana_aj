@@ -160,7 +160,7 @@ export function PublicationTimeline({
         title={selectedPublication?.title}
         actionButtons={
           selectedPublication && (
-            <div className="w-full flex flex-row flex-wrap justify-between items-center">
+            <div className="w-full flex flex-row flex-wrap justify-between items-center gap-y-2 gap-x-4">
               <div className="flex flex-row flex-wrap gap-2 h-fit">
                 {(selectedPublication.date || selectedPublication.year) && (
                   <Badge
