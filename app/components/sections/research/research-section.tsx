@@ -35,17 +35,11 @@ export function ResearchSection() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 theme-gradient-text">
             Research Interests
           </h2>
-          <p
-            className="text-lg sm:text-xl max-w-3xl mx-auto px-4"
-            style={{ color: "var(--theme-text-secondary)" }}
-          >
+          <p className="text-lg sm:text-xl max-w-3xl mx-auto px-4 text-[var(--theme-text-secondary)]">
             Cosmic Explosions in exquisite detail: Discovery to detailed
             modeling.
           </p>
-          <p
-            className="text-lg sm:text-xl max-w-3xl mx-auto px-4"
-            style={{ color: "var(--theme-text-secondary)" }}
-          >
+          <p className="text-lg sm:text-xl max-w-3xl mx-auto px-4 text-[var(--theme-text-secondary)]">
             FBOTs, Supernovae, Novae and more.
           </p>
         </motion.div>
@@ -62,7 +56,7 @@ export function ResearchSection() {
             >
               <Card
                 onClick={() => setSelected(project)}
-                className="theme-card h-full cursor-pointer hover:shadow-lg transition-all duration-300"
+                className="theme-card h-full cursor-pointer hover:shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-1"
               >
                 <CardHeader className="p-4 sm:p-6">
                   <div className="aspect-video mb-4 overflow-hidden rounded-lg">
@@ -74,10 +68,10 @@ export function ResearchSection() {
                       alt={project.title}
                       width={400}
                       height={300}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-fill"
                     />
                   </div>
-                  <CardTitle className="text-lg sm:text-xl leading-tight theme-highlight underline">
+                  <CardTitle className="text-lg sm:text-xl leading-tight theme-highlight hover:underline">
                     {project.title}
                   </CardTitle>
                 </CardHeader>
@@ -96,6 +90,7 @@ export function ResearchSection() {
         open={!!selected}
         onClose={() => setSelected(null)}
         image={selected?.image}
+        imageCaption={selected?.imageCaption}
         title={selected?.title}
         actionButtons={
           <>

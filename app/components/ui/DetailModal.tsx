@@ -10,6 +10,7 @@ interface DetailModalProps {
   onClose: () => void;
   children?: React.ReactNode;
   image?: string;
+  imageCaption?: string;
   title?: string;
   actionButtons?: React.ReactNode;
 }
@@ -19,6 +20,7 @@ export const DetailModal = ({
   onClose,
   children,
   image,
+  imageCaption,
   title,
   actionButtons,
 }: DetailModalProps) => {
@@ -58,10 +60,7 @@ export const DetailModal = ({
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="relative flex flex-col bg-[var(--theme-card-bg)] rounded-2xl shadow-2xl max-w-5xl w-full border border-[var(--theme-card-border)] overflow-hidden"
-            style={{
-              maxHeight: "90vh",
-            }}
+            className="relative flex flex-col bg-[var(--theme-card-bg)] rounded-2xl shadow-2xl max-w-5xl w-full border border-[var(--theme-card-border)] overflow-hidden max-h-[90vh]"
           >
             {/* Sticky Close Button */}
             <button
@@ -79,6 +78,12 @@ export const DetailModal = ({
                   alt={title || "modal image"}
                   className="w-full h-auto object-cover rounded-t-2xl"
                 />
+              )}
+
+              {imageCaption && (
+                <p className="text-xs text-[var(--theme-text-secondary)] p-2 text-center">
+                  fig: {imageCaption}
+                </p>
               )}
 
               <div className="p-6 sm:p-8">

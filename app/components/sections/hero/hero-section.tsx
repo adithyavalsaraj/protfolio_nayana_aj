@@ -39,8 +39,7 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
               alt="Profile"
               width={200}
               height={200}
-              className="rounded-full mx-auto border-4 shadow-2xl w-32 h-32 sm:w-48 sm:h-48 lg:w-52 lg:h-52 object-cover"
-              style={{ borderColor: "var(--theme-highlight-color)" }}
+              className="rounded-full mx-auto border-4 shadow-2xl w-32 h-32 sm:w-48 sm:h-48 lg:w-52 lg:h-52 object-cover border-[var(--theme-highlight-color)]"
               priority
             />
           </motion.div>
@@ -55,8 +54,7 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
           </motion.h1>
 
           <motion.p
-            className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8"
-            style={{ color: "var(--theme-text-secondary)" }}
+            className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8  text-[var(--theme-text-secondary)]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
@@ -65,8 +63,7 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
           </motion.p>
 
           <motion.p
-            className="text-base sm:text-lg mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed px-4"
-            style={{ color: "var(--theme-text-secondary)" }}
+            className="text-base sm:text-lg mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed px-4  text-[var(--theme-text-secondary)]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
@@ -76,8 +73,7 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
 
           {data.personal?.bioSub && (
             <motion.p
-              className="text-base sm:text-lg mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed px-4"
-              style={{ color: "var(--theme-text-secondary)" }}
+              className="text-base sm:text-lg mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed px-4 text-[var(--theme-text-secondary)]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
@@ -110,10 +106,9 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
       </div>
 
       <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-[--theme-highlight-color]"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-        style={{ color: "var(--theme-highlight-color)" }}
       >
         <ChevronDown className="w-8 h-8" />
       </motion.div>
