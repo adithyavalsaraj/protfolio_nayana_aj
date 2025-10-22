@@ -70,7 +70,7 @@ export function PublicationsSection({
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 theme-gradient-text">
             Publications
-          </h2>         
+          </h2>
           <PublicationStatistics />
           {/* External Publication Links */}
           <motion.div
@@ -132,10 +132,7 @@ export function PublicationsSection({
                 Google Scholar
               </Button>
             </div>
-            <p
-              className="text-xs text-center mt-3 px-4"
-              style={{ color: "var(--theme-text-secondary)" }}
-            >
+            <p className="text-xs text-center mt-3 px-4 text-[var(--theme-text-secondary)]">
               View complete publication lists and citation metrics
             </p>
           </motion.div>
@@ -169,27 +166,17 @@ export function PublicationsSection({
             className="max-w-md mx-auto mb-8"
           >
             <div className="relative">
-              <Search
-                className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4"
-                style={{ color: "var(--theme-text-secondary)" }}
-              />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-[var(--theme-text-secondary)]" />
               <Input
                 type="text"
                 placeholder={`Search within ${authorRole.toLowerCase()} publications...`}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="theme-input pl-10 pr-4 py-2 w-full rounded-full border-2 focus:ring-2 transition-all duration-200"
-                style={{
-                  borderColor: "var(--theme-card-border)",
-                  backgroundColor: "var(--theme-input-bg)",
-                }}
+                className="theme-input pl-10 pr-4 py-2 w-full rounded-full border-2 focus:ring-2 transition-all duration-200 border-[var(--theme-card-border)] bg-[var(--theme-input-bg)]"
               />
             </div>
             {(searchQuery || authorRole !== "All") && (
-              <p
-                className="text-sm mt-2"
-                style={{ color: "var(--theme-text-secondary)" }}
-              >
+              <p className="text-sm mt-2 text-[var(--theme-text-secondary)]">
                 Showing {filteredPublications.length}{" "}
                 {authorRole === "All"
                   ? "publication"
@@ -215,10 +202,7 @@ export function PublicationsSection({
             animate={{ opacity: 1 }}
             className="text-center py-12"
           >
-            <p
-              className="text-lg"
-              style={{ color: "var(--theme-text-secondary)" }}
-            >
+            <p className="text-lg text-[var(--theme-text-secondary)]">
               No publications found matching your filters.
             </p>
             <Button
