@@ -18,16 +18,12 @@ export interface PortfolioData {
       url: string;
     }>;
   };
-  statistics: {
-    leadAuthorPapers: number;
-    totalCitations: number;
-    hIndex: number;
-  };
   research: Array<{
     id: string;
     title: string;
     description: string;
     image: string;
+    imageCaption: string;
     paperUrl: string;
   }>;
   publications: Array<{
@@ -39,6 +35,7 @@ export interface PortfolioData {
     date?: string;
     doi: string;
     citations?: number;
+    abstract?: string;
     type: string;
     fileData?: string;
     fileType?: string;

@@ -3,6 +3,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { formatPubDate } from "@/lib/utils";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import { ExternalLink, Eye } from "lucide-react";
@@ -59,7 +60,7 @@ export function PublicationItem({
             : "ml-[calc(50%+30px)] text-left sm:max-w-[45%]"
         )}
       >
-        <Card className="theme-card border shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer">
+        <Card className="theme-card border shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer hover:scale-105 hover:-translate-y-1">
           <CardContent
             className={clsx(isMobile ? "p-3" : "p-4")}
             onClick={onSelect}
@@ -67,15 +68,16 @@ export function PublicationItem({
             <div className="space-y-3">
               {/* Date + Type */}
               <div className="flex flex-wrap justify-between items-start gap-2">
-                {publication.date || publication.year ? (
+                {(publication.date ||
+                  publication.pubdate ||
+                  publication.year) && (
                   <Badge
-                    className="text-xs font-semibold px-2 py-1"
+                    className="text-xs font-semibold px-2 py-1 text-[var(--theme-highlight-color)]"
                     style={{
                       backgroundColor:
                         theme === "dark"
                           ? "rgba(147, 51, 234, 0.2)"
                           : "rgba(59, 130, 246, 0.2)",
-                      color: "var(--theme-highlight-color)",
                       border: `1px solid ${
                         theme === "dark"
                           ? "rgba(147, 51, 234, 0.4)"
@@ -83,14 +85,14 @@ export function PublicationItem({
                       }`,
                     }}
                   >
-                    {publication.date || publication.year}
+                    {formatPubDate(publication.date || publication.pubdate) ||
+                      publication.year}
                   </Badge>
-                ) : (
-                  <span />
                 )}
-                {publication.type && (
+
+                {publication.citations !== undefined && (
                   <Badge className="theme-badge text-xs flex-shrink-0">
-                    {publication.type}
+                    Citations: {publication.citations}
                   </Badge>
                 )}
               </div>
@@ -103,8 +105,7 @@ export function PublicationItem({
               {/* Authors */}
               {publication.authors && (
                 <div
-                  className="authors-text text-xs"
-                  style={{ color: "var(--theme-text-secondary)" }}
+                  className="authors-text text-xs text-[var(--theme-text-secondary)]"
                   dangerouslySetInnerHTML={{
                     __html: highlightAuthorName(publication.authors),
                   }}

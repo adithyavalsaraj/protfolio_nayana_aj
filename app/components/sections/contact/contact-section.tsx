@@ -34,10 +34,7 @@ export function ContactSection({ theme }: ContactSectionProps) {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 theme-gradient-text">
             Get In Touch
           </h2>
-          <p
-            className="text-lg sm:text-xl max-w-3xl mx-auto px-4"
-            style={{ color: "var(--theme-text-secondary)" }}
-          >
+          <p className="text-lg sm:text-xl max-w-3xl mx-auto px-4 text-[var(--theme-text-secondary)]">
             Interested in collaboration or have questions about my research? I'd
             love to hear from you.
           </p>
@@ -57,15 +54,9 @@ export function ContactSection({ theme }: ContactSectionProps) {
                 </h3>
                 <div className="space-y-6">
                   <div className="flex items-center space-x-4">
-                    <Mail
-                      className="w-6 h-6 flex-shrink-0"
-                      style={{ color: "var(--theme-highlight-color)" }}
-                    />
+                    <Mail className="w-6 h-6 flex-shrink-0 text-[var(--theme-highlight-color)]" />
                     <div className="min-w-0 flex-1">
-                      <p
-                        className="text-sm sm:text-base"
-                        style={{ color: "var(--theme-text-secondary)" }}
-                      >
+                      <p className="text-sm sm:text-base text-[var(--theme-text-secondary)]">
                         Email
                         {Array.isArray(data.personal.email) &&
                         data.personal.email.length > 1
@@ -104,15 +95,9 @@ export function ContactSection({ theme }: ContactSectionProps) {
 
                   {data.personal?.location && (
                     <div className="flex items-center space-x-4">
-                      <MapPin
-                        className="w-6 h-6 flex-shrink-0"
-                        style={{ color: "var(--theme-highlight-color)" }}
-                      />
+                      <MapPin className="w-6 h-6 flex-shrink-0 text-[var(--theme-highlight-color)]" />
                       <div className="min-w-0 flex-1">
-                        <p
-                          className="text-sm sm:text-base"
-                          style={{ color: "var(--theme-text-secondary)" }}
-                        >
+                        <p className="text-sm sm:text-base text-[var(--theme-text-secondary)]">
                           Location
                         </p>
                         <button
@@ -133,14 +118,8 @@ export function ContactSection({ theme }: ContactSectionProps) {
                   )}
 
                   {data.personal?.social?.length ? (
-                    <div
-                      className="pt-6 border-t"
-                      style={{ borderColor: "var(--theme-card-border)" }}
-                    >
-                      <p
-                        className="mb-4 text-sm sm:text-base"
-                        style={{ color: "var(--theme-text-secondary)" }}
-                      >
+                    <div className="pt-6 border-t border-[var(--theme-card-border)]">
+                      <p className="mb-4 text-sm sm:text-base text-[var(--theme-text-secondary)]">
                         Connect with me:
                       </p>
                       <div className="flex flex-wrap gap-3">

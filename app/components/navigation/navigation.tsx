@@ -153,8 +153,7 @@ export function Navigation({
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <motion.div
-            className="lg:hidden mt-4 pb-4 border-t"
-            style={{ borderColor: "var(--theme-card-border)" }}
+            className="lg:hidden mt-4 pb-4 border-t border-[--theme-card-border]"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}

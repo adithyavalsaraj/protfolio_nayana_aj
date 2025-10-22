@@ -3,7 +3,6 @@ import { experienceData } from "./experience-data";
 import { personalData } from "./personal-data";
 import { publicationsData } from "./publications-data";
 import { researchData } from "./research-data";
-import { statisticsData } from "./statistics-data";
 
 // Helper function to generate URL-friendly slug (client-side version)
 export function generateSlug(title?: string): string {
@@ -19,7 +18,6 @@ export function generateSlug(title?: string): string {
 // Combined data structure for easy access
 export const portfolioData = {
   personal: personalData,
-  statistics: statisticsData,
   research: researchData,
   publications: publicationsData,
   experience: experienceData,

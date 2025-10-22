@@ -8,6 +8,8 @@ export function PublicationStatistics() {
   const { data } = usePortfolio();
 
   const [adsStats, setAdsStats] = useState({
+    totalPublications: "—",
+    firstAuthorPapers: "—",
     totalCitations: "—",
     hIndex: "—",
   });
@@ -26,6 +28,8 @@ export function PublicationStatistics() {
         if (!res.ok) throw new Error("ADS API unavailable");
         const json = await res.json();
         setAdsStats({
+          totalPublications: json.totalPublications ?? "—",
+          firstAuthorPapers: json.firstAuthorCount ?? "—",
           totalCitations: json.totalCitations ?? "—",
           hIndex: json.hIndex ?? "—",
         });
@@ -43,8 +47,8 @@ export function PublicationStatistics() {
   }, []);
 
   const stats = [
-    { label: "Total Publications", value: totalPublications },
-    { label: "First Author Papers", value: leadAuthorPapers },
+    { label: "Total Publications", value: adsStats.totalPublications },
+    { label: "First Author Papers", value: adsStats.firstAuthorPapers },
     { label: "Total Citations", value: adsStats.totalCitations },
     { label: "h-index", value: adsStats.hIndex },
   ];
@@ -71,10 +75,7 @@ export function PublicationStatistics() {
             <div className="text-2xl sm:text-3xl font-bold theme-gradient-text mb-2">
               {stat.value}
             </div>
-            <div
-              className="text-sm sm:text-base"
-              style={{ color: "var(--theme-text-secondary)" }}
-            >
+            <div className="text-sm sm:text-base text-[var(--theme-text-secondary)]">
               {stat.label}
             </div>
           </motion.div>
