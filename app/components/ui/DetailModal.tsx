@@ -81,7 +81,7 @@ export const DetailModal = ({
                 />
               )}
 
-              <div className="p-6 sm:p-8 pb-10">
+              <div className="p-6 sm:p-8">
                 {/* add bottom padding to avoid hidden content behind footer */}
                 {title && (
                   <h2 className="text-2xl sm:text-3xl font-bold mb-4 theme-gradient-text">
